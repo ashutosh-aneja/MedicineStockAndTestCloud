@@ -31,3 +31,9 @@ spec:
   - port: 80
   selector:
     app: MedicineStock
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/MedicalStockModuleTest.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
