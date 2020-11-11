@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: medicinestock
-        image: dockcr.azurecr.io/medicinestockrepos:latest
+        image: dock1cr.azurecr.io/medicinestockrepos:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
@@ -31,9 +31,3 @@ spec:
   - port: 80
   selector:
     app: MedicineStock
-steps:
-- task: DotNetCoreCLI@3
-  inputs:
-    command: test
-    projects: '**/*Tests/MedicalStockModuleTest.csproj'
-    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
