@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: medicinestock
-        image: dock1cr.azurecr.io/medicinestockrepos:latest
+        image: dockcr.azurecr.io/medicinestockrepos:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
